@@ -1,0 +1,13 @@
+            <button class="pin-btn" onclick="toggleThumbnail({id})">
+              <span id="btnIcon{id}">⧉</span>
+              <span class="tooltip-text" id="tooltipLabel{id}">Open Screenshot</span>
+            </button>
+            <div id="thumbContainer{id}" style="display:none;" data-compressed="{id}">
+              <img id="thumbImg{id}" class="step-thumb" title="Click to maximize"
+                onclick="openFullImage('imageModal{id}', 'fullImage{id}', {id})" />
+            </div>
+            <div id="imageModal{id}" class="modal">
+              <div class="image-title" >{TITLE}</div>
+              <span class="close" onclick="closeModal('imageModal{id}', {id})">×</span>
+              <img class="modal-content" id="fullImage{id}" />
+            </div>

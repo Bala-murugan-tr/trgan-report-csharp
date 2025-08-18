@@ -1,0 +1,19 @@
+	<div class="layout" id="chartCarousel">
+        <div class="chart-container" id="chart-slide-0">
+            <canvas id="testSummaryChart" width="460" height="250"></canvas>
+            <div class="chart-title"><!--TRGAN_TEST--></div>
+        </div>
+        <div class="chart-container" id="chart-slide-1">
+            <canvas id="testBlockSummaryChart" width="460" height="250"></canvas>
+            <div class="chart-title"><!--TRGAN_SUB__TEST--></div>
+        </div>
+        <div class="chart-container" id="chart-slide-2" style="display: none;">
+            <canvas id="stepSummaryChart" width="460" height="250"></canvas>
+            <div class="chart-title"><!--TRGAN_STEP--></div>
+        </div>
+        <div class="chart-dots">
+            <span class="dot active" onclick="showChart(0)"></span>
+            <span class="dot" onclick="showChart(1)"></span>
+            <span class="dot" onclick="showChart(2)"></span>
+        </div>
+    </div>

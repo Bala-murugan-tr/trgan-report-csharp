@@ -1,0 +1,1 @@
+function expandLogs(s){const e=s.nextElementSibling,o=s.closest(".step"),t=s.querySelector(".step-arrow"),n=o.classList.contains("expanded");"none"===e.style.display?t.classList.add("open"):t.classList.remove("open"),e.style.display=n?"none":"block",n||e.scrollIntoView({behavior:"smooth",block:"start"}),o.classList.toggle("expanded",!n)}

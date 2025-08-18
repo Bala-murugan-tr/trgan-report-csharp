@@ -1,0 +1,60 @@
+﻿using System;
+
+namespace TrganReport.Utils;
+internal static class ReportTemplates {
+    private const string Base = "TrganReport.Templates.";
+    private static readonly string CssPath = Base + "assets.css.";
+    private static readonly Lazy<string> _bodyCss = new(() => ResourceLoader.Load(CssPath + "body.css"));
+    private static readonly Lazy<string> _metaSummaryCss = new(() => ResourceLoader.Load(CssPath + "meta_summary.css"));
+    private static readonly Lazy<string> _metaInlineCss = new(() => ResourceLoader.Load(CssPath + "meta_inline.css"));
+    private static readonly Lazy<string> _metaChartCss = new(() => ResourceLoader.Load(CssPath + "meta_chart.css"));
+    private static readonly Lazy<string> _summaryPanelCss = new(() => ResourceLoader.Load(CssPath + "summary_panel.css"));
+    private static readonly Lazy<string> _statusTableCss = new(() => ResourceLoader.Load(CssPath + "status_table.css"));
+    private static readonly Lazy<string> _stepCss = new(() => ResourceLoader.Load(CssPath + "step.css"));
+    private static readonly Lazy<string> _testCss = new(() => ResourceLoader.Load(CssPath + "test.css"));
+    private static readonly Lazy<string> _logCss = new(() => ResourceLoader.Load(CssPath + "log.css"));
+    private static readonly Lazy<string> _imageCss = new(() => ResourceLoader.Load(CssPath + "image.css"));
+    private static readonly Lazy<string> _trganTableCss = new(() => ResourceLoader.Load(CssPath + "trgan_table.css"));
+    internal static string Css_Body => _bodyCss.Value;
+    internal static string Css_MetaSummary => _metaSummaryCss.Value;
+    internal static string Css_MetaInline => _metaInlineCss.Value;
+    internal static string Css_MetaChart => _metaChartCss.Value;
+    internal static string Css_SummaryPanel => _summaryPanelCss.Value;
+    internal static string Css_StatusTable => _statusTableCss.Value;
+    internal static string Css_Step => _stepCss.Value;
+    internal static string Css_Test => _testCss.Value;
+    internal static string Css_Log => _logCss.Value;
+    internal static string Css_Image => _imageCss.Value;
+    internal static string Css_TrganTable => _trganTableCss.Value;
+    //
+    private static readonly string JsPath = Base + "assets.js.";
+    private static readonly Lazy<string> _testJs = new(() => ResourceLoader.Load(JsPath + "test.js"));
+    private static readonly Lazy<string> _metaSummaryJs = new(() => ResourceLoader.Load(JsPath + "meta_summary.js"));
+    private static readonly Lazy<string> _metaChartJs = new(() => ResourceLoader.Load(JsPath + "meta_chart.js"));
+    private static readonly Lazy<string> _statusTableJs = new(() => ResourceLoader.Load(JsPath + "execution_status.js"));
+    private static readonly Lazy<string> _logJs = new(() => ResourceLoader.Load(JsPath + "log.js"));
+    private static readonly Lazy<string> _imageJs = new(() => ResourceLoader.Load(JsPath + "image.js"));
+    private static readonly Lazy<string> _trganTableJs = new(() => ResourceLoader.Load(JsPath + "trgan_table.js"));
+    internal static string Js_Test => _testJs.Value;
+    internal static string Js_MetaSummary => _metaSummaryJs.Value;
+    internal static string Js_MetaChart => _metaChartJs.Value;
+    internal static string Js_StatusTable => _statusTableJs.Value;
+    internal static string Js_Log => _logJs.Value;
+    internal static string Js_Image => _imageJs.Value;
+    internal static string Js_TrganTable => _trganTableJs.Value;
+    //
+    internal static string Index => ResourceLoader.Load(Base + "base.html");
+    private static readonly Lazy<string> _log = new(() => ResourceLoader.Load(Base + "log.html"));
+    internal static string Log => _log.Value;
+    private static readonly Lazy<string> _image = new(() => ResourceLoader.Load(Base + "image.html"));
+    internal static string Image => _image.Value;
+    internal static string Step => ResourceLoader.Load(Base + "step.html");
+    internal static string Test => ResourceLoader.Load(Base + "test.html");
+    internal static string Container => ResourceLoader.Load(Base + "container.html");
+    internal static string MetaSummary => ResourceLoader.Load(Base + "meta_summary.html");
+    internal static string MetaInline => ResourceLoader.Load(Base + "meta_inline.html");
+    internal static string MetaChart => ResourceLoader.Load(Base + "meta_chart.html");
+    internal static string SummaryPanel => ResourceLoader.Load(Base + "summary.html");
+    internal static string StatusTable => ResourceLoader.Load(Base + "execution_status.html");
+    internal static string Header => ResourceLoader.Load(Base + "header.html");
+}

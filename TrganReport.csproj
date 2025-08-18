@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<Authors>bala</Authors>
+		<Version>1.0.0</Version>
+		<GenerateEmbeddedFilesManifest>true</GenerateEmbeddedFilesManifest>
+		<ImplicitUsings>disable</ImplicitUsings>
+		<Company>Trgan</Company>
+		<AssemblyName>TrganReport</AssemblyName>
+		<PackageIcon>icons/trgan-logos.png</PackageIcon>
+		<PackageTags>TrganReport;HTMLReport;Trgan;Report;Automation;Reporting;BDD;Selenium</PackageTags>
+		<RepositoryUrl>https://github.com/Trgan-Reports/trgan-report-csharp</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<GenerateDocumentationFile>True</GenerateDocumentationFile>
+		<Description>Lightweight, modular reporting framework for automation. Built for speed, scalability, and visual impact.</Description>
+		<License>MIT</License>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<EmbeddedResource Include="Templates\**\*" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Include="Branding\trgan-logos.png" Pack="true" PackagePath="icons/" />
+	</ItemGroup>
+
+
+	<ItemGroup>
+		<PackageReference Include="System.Drawing.Common" Version="9.0.8"/>
+	</ItemGroup>
+
+</Project>
