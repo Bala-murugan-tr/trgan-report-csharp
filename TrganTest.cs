@@ -105,7 +105,7 @@ public class TrganTest(TrganContainer container, string trgantestName, string[] 
     /// <param name="status"></param>
     public void Log(Status status) {
         Status = status;
-        testDetails.EndTime = DateTime.Now;
+        UpdateEndTimes();
     }
     /// <summary>
     /// Marks the test as PASS
